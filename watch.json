@@ -1,0 +1,15 @@
+{     
+  "install": {
+    "include": [
+      "^.*\\.json"
+    ]
+  },
+  "restart": {
+    "include": [
+      "^server/.*\\.ts$",
+      "^\\w*\\.js",
+      "^\\w*\\.ts"
+    ]
+  },
+  "throttle": 1000
+}
