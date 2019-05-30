@@ -1,0 +1,12 @@
+{
+  "include": [
+    "."
+  ],
+  "exclude": [],
+  "compilerOptions": {
+    "outFile": "client.js",
+    "module": "amd",
+    "types": [],
+  }
+
+}

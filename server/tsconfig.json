@@ -4,5 +4,6 @@
   ],
   "exclude": [],
   "compilerOptions": {
+    "target": "ES6"
   }
 }

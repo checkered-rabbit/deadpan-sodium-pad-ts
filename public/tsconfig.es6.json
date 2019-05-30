@@ -6,7 +6,9 @@
   "compilerOptions": {
     "outFile": "client.js",
     "module": "amd",
-    "types": []
+    "types": [],
+    "target": "ES6",
+    "sourceMap": true
   }
 
 }

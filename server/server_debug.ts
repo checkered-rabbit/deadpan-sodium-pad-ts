@@ -1,11 +1,26 @@
-//     
+//         
 
-import * as server from './server/real_server';
+import * as server from './server_real';
 import * as shell from 'shelljs';
 
 //shell.exec("tsc -w -p public",{async:true});
 
+console.log("node running ",new Date().toLocaleTimeString());
+
+shell.mkdir('-p','.data');
+
+//shell.exec('node node_modules/.bin/tsc -w -p public',{async:true});
+
 server.start();
+//console.log(shell.exec("cat nohup.out"));
+
+let p = shell.exec("tail -f start.log",{async:true});
+if (process.env.TAIL2CON) {
+p.stdout.on('data', function(data) {
+  console.log("tail: " + data.replace(/\n(?!$)/g,'\ntail: '));
+});
+}
+
 
 //console.log(''+new Date(), "running");
 
