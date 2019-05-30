@@ -5,9 +5,11 @@
   "name": "hello-sqlite",
   "version": "0.0.1",
   "description": "A simple Node app with SQLite as a database management system, instantly up and running.",
-  "main": "server.js",
+  "main": "server/server_debug.js",
   "scripts": {
-    "start": "tsc -w -p public&ts-node --project server/tsconfig.json server.ts"
+    "start": "bash ./start.sh glitch",
+    "glitch": "bash ./start.sh glitch",
+    "debug": "bash ./start.sh debug"
   },
   "dependencies": {
     "express": "^4.16.3",
@@ -16,7 +18,9 @@
     "shelljs": "",
     "@types/node": "",
     "ts-node": "",
-    "amd.ts": ""
+    "amd.ts": "",
+    "@types/shelljs": "",
+    "tsc-to": ""
   },
   "engines": {
     "node": "8.x"

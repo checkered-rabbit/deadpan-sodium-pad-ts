@@ -1,4 +1,4 @@
-let delaying = 5000;
+let delaying = Number(process.env.DELAY || 2500);
 
 export const delay = <T, U extends Array<T>, V>(fn: (...args: U) => void, ...args: U): void => {
   if (delaying) {    
@@ -10,3 +10,4 @@ export const delay = <T, U extends Array<T>, V>(fn: (...args: U) => void, ...arg
   }
 }
 
+//console.log(delay.toString());

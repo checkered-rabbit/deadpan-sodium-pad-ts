@@ -4,6 +4,8 @@
 
 import * as debug from './debug';
 
+export function start() {
+
 // init project
 var express = require('express');
 var bodyParser = require('body-parser');
@@ -61,9 +63,9 @@ app.get('/getDreams', function(request, response) {
 });
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function() {
+var listener = app.listen(process.env.PORT||8080, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
 
 
-export function start() {}
+}
